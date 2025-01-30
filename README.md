@@ -16,7 +16,8 @@ Além disso, aprimoramos a interface, garantindo uma experiência melhor ao usu�
 ### 🔹 1. Adição das Novas Funcionalidades
 Implementamos quatro novas operações matemáticas utilizando a biblioteca dart:math e a avaliação de expressões com expressions.
 
-- Raiz Quadrada (√x)
+#### 1.1 Raiz Quadrada (√x)
+
 A função sqrt(x) foi adicionada para calcular a raiz quadrada de um número. O código busca sqrt(x) na expressão e substitui pela operação correspondente:
 
 ```
@@ -27,7 +28,8 @@ String _calcularRaizQuadrada(String expressao) {
   return raizQuadrada.toString();
 }
 ```
-- Seno (sen(x))
+#### 1.2 Seno (sen(x))
+
 A função sen(x) calcula o seno de um número convertido para radianos, pois a função sin() do Dart trabalha com radianos:
 
 ```
@@ -39,12 +41,11 @@ String _calcularSeno(String expressao) {
 }
 ```
 
-1.3 Exponenciação (x^y)
+#### 1.3 Exponenciação (x^y)
+
 A função pow(x, y) foi utilizada para realizar operações de potência:
 
-dart
-Copiar
-Editar
+```
 String _calcularExponenciacao(String expressao) {
   var partes = expressao.split('^');
   if (partes.length == 2) {
@@ -55,31 +56,35 @@ String _calcularExponenciacao(String expressao) {
   }
   return expressao;
 }
-1.4 Fatorial (x!)
+```
+
+#### 1.4 Fatorial (x!)
+
 Para implementar o fatorial, utilizamos uma função recursiva:
 
-dart
-Copiar
-Editar
+```
 int _fatorial(int n) {
   if (n == 0 || n == 1) {
     return 1;
   }
   return n * _fatorial(n - 1);
 }
+```
+
 Esta função é chamada quando fatorial(x) é detectado na expressão.
 
-🎨 2. Melhorias na Interface
-A interface foi reformulada para garantir maior clareza e organização: ✔️ Nova disposição dos botões
+### 🎨 2. Melhorias na Interface
+
+A interface foi reformulada para garantir maior clareza e organização: 
+
+✔️ Nova disposição dos botões
 ✔️ Melhor espaçamento
 ✔️ Botões responsivos
 ✔️ Centralização da calculadora na tela
 
 O código a seguir ajusta o tamanho e disposição dos botões na grade:
 
-dart
-Copiar
-Editar
+```
 GridView.count(
   shrinkWrap: true,
   crossAxisCount: 4, // Define 4 colunas
@@ -94,10 +99,14 @@ GridView.count(
     _botao('^'), _botao('sen('), _botao('sqrt('), _botao('fatorial('),
   ],
 ),
-🔬 3. Testes Práticos
+```
+
+### 🔬 3. Testes Práticos
+
 Abaixo está uma bateria de testes para validar as novas funcionalidades:
 
-✅ Testes Unitários
+#### ✅ Testes Unitários
+
 Expressão	Resultado Esperado
 sqrt(9)	3.0
 sen(3.14)	0.00159 (aprox.)
@@ -107,29 +116,7 @@ sqrt(16) + sen(1.57)	4.99999 (aprox.)
 fatorial(3) + 5^2	28
 Para rodar os testes, basta inserir as expressões na calculadora e conferir os resultados.
 
-🛠️ Como Rodar o Projeto
-Instalação
-Clone o repositório:
-bash
-Copiar
-Editar
-git clone https://github.com/usuario/calculadora-avancada.git
-Acesse o diretório do projeto:
-bash
-Copiar
-Editar
-cd calculadora-avancada
-Instale as dependências:
-bash
-Copiar
-Editar
-flutter pub get
-Execute o projeto:
-bash
-Copiar
-Editar
-flutter run
-🎤 Conclusão
+## 🎤 Conclusão
 ✔️ Implementamos novas funcionalidades matemáticas
 ✔️ Melhoramos a interface da calculadora
 ✔️ Criamos testes práticos para validar os cálculos
@@ -138,4 +125,4 @@ Com essas melhorias, a calculadora se tornou mais funcional e intuitiva. 🚀
 
 📌 Dúvidas ou sugestões? Contribua com este repositório!
 
-🔗 Repositório: github.com/usuario/calculadora-avancada
+🔗 Repositório: [github.com/usuario/calculadora-avancada](https://github.com/SolracZiul/advanced-calculator)
