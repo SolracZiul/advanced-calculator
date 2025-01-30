@@ -12,10 +12,11 @@ Este projeto aprimora a calculadora desenvolvida anteriormente no Seminário Int
 Além disso, aprimoramos a interface, garantindo uma experiência melhor ao usuário.
 
 ## 📊 O que foi modificado no código?
+
 ### 🔹 1. Adição das Novas Funcionalidades
 Implementamos quatro novas operações matemáticas utilizando a biblioteca dart:math e a avaliação de expressões com expressions.
 
-1.1 Raiz Quadrada (√x)
+- Raiz Quadrada (√x)
 A função sqrt(x) foi adicionada para calcular a raiz quadrada de um número. O código busca sqrt(x) na expressão e substitui pela operação correspondente:
 
 ```
@@ -26,18 +27,18 @@ String _calcularRaizQuadrada(String expressao) {
   return raizQuadrada.toString();
 }
 ```
-1.2 Seno (sen(x))
+- Seno (sen(x))
 A função sen(x) calcula o seno de um número convertido para radianos, pois a função sin() do Dart trabalha com radianos:
 
-dart
-Copiar
-Editar
+```
 String _calcularSeno(String expressao) {
   expressao = expressao.replaceAll('sen(', '').replaceAll(')', '');
   double numero = double.parse(expressao);
   double seno = sin(numero);
   return seno.toString();
 }
+```
+
 1.3 Exponenciação (x^y)
 A função pow(x, y) foi utilizada para realizar operações de potência:
 
