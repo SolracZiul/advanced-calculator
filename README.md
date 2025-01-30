@@ -78,8 +78,11 @@ Esta função é chamada quando fatorial(x) é detectado na expressão.
 A interface foi reformulada para garantir maior clareza e organização: 
 
 ✔️ Nova disposição dos botões
+
 ✔️ Melhor espaçamento
+
 ✔️ Botões responsivos
+
 ✔️ Centralização da calculadora na tela
 
 O código a seguir ajusta o tamanho e disposição dos botões na grade:
