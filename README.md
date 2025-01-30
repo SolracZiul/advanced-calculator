@@ -116,8 +116,6 @@ Abaixo está uma bateria de testes para validar as novas funcionalidades:
 | sen(3.14) |	0.00159 (aprox.) |
 | 2^3 |	8 |
 | fatorial(5) |	120 |
-| sqrt(16) + sen(1.57) |	4.99999 (aprox.) |
-| fatorial(3) + 5^2 |	28 |
 
 Para rodar os testes, basta inserir as expressões na calculadora e conferir os resultados.
 
