@@ -1,4 +1,4 @@
-# 🚀 Melhorando a Nossa Calculadora - Talento Tech
+# 🚀 Melhorando a Nossa Calculadora
 
 ## 📌 Introdução
 
