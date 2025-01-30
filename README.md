@@ -1,5 +1,6 @@
 # 🚀 Melhorando a Nossa Calculadora - Talento Tech
 
+
 ## 📌 Introdução
 
 Este projeto aprimora a calculadora desenvolvida anteriormente no Seminário Integrador, adicionando novas funcionalidades matemáticas avançadas. As operações implementadas incluem:
