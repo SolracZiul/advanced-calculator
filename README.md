@@ -1,16 +1,140 @@
-# myapp
+# 🚀 Melhorando a Nossa Calculadora - Talento Tech
 
-A new Flutter project.
+## 📌 Introdução
 
-## Getting Started
+Este projeto aprimora a calculadora desenvolvida anteriormente no Seminário Integrador, adicionando novas funcionalidades matemáticas avançadas. As operações implementadas incluem:
 
-This project is a starting point for a Flutter application.
+- Raiz Quadrada (√x)
+- Seno (sen(x))
+- Exponenciação (x^y)
+- Fatorial (x!)
 
-A few resources to get you started if this is your first Flutter project:
+Além disso, aprimoramos a interface, garantindo uma experiência melhor ao usuário.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 📊 O que foi modificado no código?
+### 🔹 1. Adição das Novas Funcionalidades
+Implementamos quatro novas operações matemáticas utilizando a biblioteca dart:math e a avaliação de expressões com expressions.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1.1 Raiz Quadrada (√x)
+A função sqrt(x) foi adicionada para calcular a raiz quadrada de um número. O código busca sqrt(x) na expressão e substitui pela operação correspondente:
+
+```
+String _calcularRaizQuadrada(String expressao) {
+  expressao = expressao.replaceAll('sqrt(', '').replaceAll(')', '');
+  double numero = double.parse(expressao);
+  double raizQuadrada = sqrt(numero);
+  return raizQuadrada.toString();
+}
+```
+1.2 Seno (sen(x))
+A função sen(x) calcula o seno de um número convertido para radianos, pois a função sin() do Dart trabalha com radianos:
+
+dart
+Copiar
+Editar
+String _calcularSeno(String expressao) {
+  expressao = expressao.replaceAll('sen(', '').replaceAll(')', '');
+  double numero = double.parse(expressao);
+  double seno = sin(numero);
+  return seno.toString();
+}
+1.3 Exponenciação (x^y)
+A função pow(x, y) foi utilizada para realizar operações de potência:
+
+dart
+Copiar
+Editar
+String _calcularExponenciacao(String expressao) {
+  var partes = expressao.split('^');
+  if (partes.length == 2) {
+    double base = double.parse(partes[0]);
+    double expoente = double.parse(partes[1]);
+    num resultado = pow(base, expoente);
+    return resultado.toString();
+  }
+  return expressao;
+}
+1.4 Fatorial (x!)
+Para implementar o fatorial, utilizamos uma função recursiva:
+
+dart
+Copiar
+Editar
+int _fatorial(int n) {
+  if (n == 0 || n == 1) {
+    return 1;
+  }
+  return n * _fatorial(n - 1);
+}
+Esta função é chamada quando fatorial(x) é detectado na expressão.
+
+🎨 2. Melhorias na Interface
+A interface foi reformulada para garantir maior clareza e organização: ✔️ Nova disposição dos botões
+✔️ Melhor espaçamento
+✔️ Botões responsivos
+✔️ Centralização da calculadora na tela
+
+O código a seguir ajusta o tamanho e disposição dos botões na grade:
+
+dart
+Copiar
+Editar
+GridView.count(
+  shrinkWrap: true,
+  crossAxisCount: 4, // Define 4 colunas
+  childAspectRatio: 1.2, // Ajusta a proporção dos botões
+  mainAxisSpacing: 5,
+  crossAxisSpacing: 5,
+  children: [
+    _botao('7'), _botao('8'), _botao('9'), _botao('÷'),
+    _botao('4'), _botao('5'), _botao('6'), _botao('x'),
+    _botao('1'), _botao('2'), _botao('3'), _botao('-'),
+    _botao('0'), _botao('.'), _botao('='), _botao('+'),
+    _botao('^'), _botao('sen('), _botao('sqrt('), _botao('fatorial('),
+  ],
+),
+🔬 3. Testes Práticos
+Abaixo está uma bateria de testes para validar as novas funcionalidades:
+
+✅ Testes Unitários
+Expressão	Resultado Esperado
+sqrt(9)	3.0
+sen(3.14)	0.00159 (aprox.)
+2^3	8
+fatorial(5)	120
+sqrt(16) + sen(1.57)	4.99999 (aprox.)
+fatorial(3) + 5^2	28
+Para rodar os testes, basta inserir as expressões na calculadora e conferir os resultados.
+
+🛠️ Como Rodar o Projeto
+Instalação
+Clone o repositório:
+bash
+Copiar
+Editar
+git clone https://github.com/usuario/calculadora-avancada.git
+Acesse o diretório do projeto:
+bash
+Copiar
+Editar
+cd calculadora-avancada
+Instale as dependências:
+bash
+Copiar
+Editar
+flutter pub get
+Execute o projeto:
+bash
+Copiar
+Editar
+flutter run
+🎤 Conclusão
+✔️ Implementamos novas funcionalidades matemáticas
+✔️ Melhoramos a interface da calculadora
+✔️ Criamos testes práticos para validar os cálculos
+
+Com essas melhorias, a calculadora se tornou mais funcional e intuitiva. 🚀
+
+📌 Dúvidas ou sugestões? Contribua com este repositório!
+
+🔗 Repositório: github.com/usuario/calculadora-avancada
