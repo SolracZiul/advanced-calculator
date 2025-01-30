@@ -10,8 +10,7 @@ Este projeto aprimora a calculadora desenvolvida anteriormente no Seminário Int
 - Fatorial (x!)
 
 Além disso, aprimoramos a interface, garantindo uma experiência melhor ao usuário.
-
-## Calculadora: https://solracziul.github.io/advanced-calculator/
+Calculadora: https://solracziul.github.io/advanced-calculator/
 
 ## 📊 O que foi modificado no código?
 
