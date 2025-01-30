@@ -120,8 +120,11 @@ Abaixo está uma bateria de testes para validar as novas funcionalidades:
 Para rodar os testes, basta inserir as expressões na calculadora e conferir os resultados.
 
 ## 🎤 Conclusão
+
 ✔️ Implementamos novas funcionalidades matemáticas
+
 ✔️ Melhoramos a interface da calculadora
+
 ✔️ Criamos testes práticos para validar os cálculos
 
 Com essas melhorias, a calculadora se tornou mais funcional e intuitiva. 🚀
