@@ -133,4 +133,4 @@ Com essas melhorias, a calculadora se tornou mais funcional e intuitiva. 🚀
 
 📌 Dúvidas ou sugestões? Contribua com este repositório!
 
-🔗 Repositório: [https://github.com/SolracZiul/advanced-calculator]
+🔗 Repositório: https://github.com/SolracZiul/advanced-calculator
